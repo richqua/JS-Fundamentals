@@ -1,8 +1,9 @@
-const x = Number(process.argv[2]);
+const arg = process.argv[2];
 
-if (!Number.isInteger(x)) {
+if (arg === undefined || !Number.isInteger(Number(arg))) {
     console.log("Missing number of occurrences");
 } else {
+    const x = Number(arg);
     let i = 0;
     let output = "";
     while (i < x) {
