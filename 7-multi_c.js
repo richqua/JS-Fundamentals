@@ -1,14 +1,10 @@
 const arg = process.argv[2];
+const parsed = Number(arg);
 
-if (arg === undefined || !Number.isInteger(Number(arg))) {
+if (arg === undefined || !Number.isFinite(parsed) || !Number.isInteger(parsed)) {
     console.log("Missing number of occurrences");
 } else {
-    const x = Number(arg);
-    let i = 0;
-    let output = "";
-    while (i < x) {
-        output += "C is fun\n";
-        i++;
+    for (let i = 0; i < parsed; i++) {
+        console.log("C is fun");
     }
-    console.log(output.trim());
 }
