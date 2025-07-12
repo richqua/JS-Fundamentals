@@ -1,4 +1,4 @@
-const argsCount = process.argv.length[2];
+const argsCount = process.argv.slice(2).length;
 
 switch (argsCount) {
     case 0:
